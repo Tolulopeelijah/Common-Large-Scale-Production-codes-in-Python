@@ -14,7 +14,7 @@ class TypedField:
     
     def __set__(self, obj, value):
         if type(value) != self.expected_type:
-            raise TypeError(f"value has a type of {type(value)} instead of {self.expected_type}")
+            raise TypeError(f"Expected {self.expected_type}, got {type(value)}")
         obj.__dict__[self.name] = value
 
 
