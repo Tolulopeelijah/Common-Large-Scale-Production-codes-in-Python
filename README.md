@@ -11,3 +11,7 @@ _*Other principles in the SOLID Principles:*_
 *L - Liskov Substitution:* Child classes should work anywhere parent works.
 *I - Interface Segregation:* Many small interfaces > one big interface.
 *D - Dependency Inversion:* Depend on abstractions, not concrete details.
+
+- When using .get() on a Queue, it does not throw an error when empty, it blocks until an item is available.
+- Queue acquires a lock when accessing its elements, making it suitable for concurrent access across multiple threads.
+- The validated attribute descriptor is essentially how Django model fields work under the hood.
