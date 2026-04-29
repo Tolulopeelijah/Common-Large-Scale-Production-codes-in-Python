@@ -19,12 +19,12 @@ class ManagedClient:
 
     def __enter__(self):
         self.session = requests.Session()
-        return self  # binds to 'client' in: with ManagedClient(...) as client
+        return self  
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.session.close()
-        return False  # False = let exceptions propagate, True = suppress them
-
+        return False  
+        
     def get(self, endpoint):
         for attempt in range(self.retries):
             try:
