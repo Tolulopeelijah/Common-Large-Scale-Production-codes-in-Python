@@ -15,3 +15,4 @@ _*Other principles in the SOLID Principles:*_
 - When using .get() on a Queue, it does not throw an error when empty, it blocks until an item is available.
 - Queue acquires a lock when accessing its elements, making it suitable for concurrent access across multiple threads.
 - The validated attribute descriptor is essentially how Django model fields work under the hood.
+- every agent tool call (web search, code exec, llm call,..) should be wrapped in resource lifecycle management [context manager](https://github.com/Tolulopeelijah/Common-Large-Scale-Production-codes-in-Python/blob/main/patterns/context_manager.py) in case the agent crashes mid run, it won't cause dangling conn, leaked file handles, or half written state. (guaranteeing cleanup regardless of what went wrong).
