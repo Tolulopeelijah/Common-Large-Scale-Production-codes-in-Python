@@ -1,3 +1,12 @@
+"""
+Token bucket rate limiter
+
+Real scenario: your agent is hammering the OpenAI API and hitting 429s. 
+You need a rate limiter that allows bursts of requests but enforces an average rate over time. 
+The token bucket algorithm is what Anthropic, OpenAI and most APIs use internally — 
+and what you should use client-side too.
+"""
+
 import time 
 
 class TokenBucket:
