@@ -1,3 +1,14 @@
+"""
+Circuit breaker
+
+Real scenario: your agent is calling an external tool — a search API, a code executor, a vector DB. 
+That service goes down. Without a circuit breaker, your agent hammers it with retries, 
+wastes time on every call, and never recovers gracefully. 
+A circuit breaker tracks failures and temporarily stops attempting calls to a broken service, 
+then probes cautiously to see if it recovered.
+"""
+
+
 import time
 
 OPEN = 'open'
