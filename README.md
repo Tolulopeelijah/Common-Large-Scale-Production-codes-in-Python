@@ -16,3 +16,4 @@ _*Other principles in the SOLID Principles:*_
 - Queue acquires a lock when accessing its elements, making it suitable for concurrent access across multiple threads.
 - The validated attribute descriptor is essentially how Django model fields work under the hood.
 - every agent tool call (web search, code exec, llm call,..) should be wrapped in resource lifecycle management [context manager](https://github.com/Tolulopeelijah/Common-Large-Scale-Production-codes-in-Python/blob/main/patterns/context_manager.py) in case the agent crashes mid run, it won't cause dangling conn, leaked file handles, or half written state. (guaranteeing cleanup regardless of what went wrong).
+- there is no way in python to stop a running function after N seconds outside the thread running it, so a trick is to run in a Thread then join with timeout (the thread will still continue in background though until failure or sucess).
