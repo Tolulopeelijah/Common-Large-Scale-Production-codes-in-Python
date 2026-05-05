@@ -1,5 +1,7 @@
-# Common Production Patterns & Large Scale Techniques in Python 
-I asked claude to keep giving me production grade pseudo code to implement in python, just to strengthen my idea_to_code muscle and get more familiar with techniques in large scale code.
+# Production Python (Idea to Code Drills)
+
+A self-imposed daily drill: given a production-grade problem description, implement it in Python without autocomplete or AI assistance, reviewed and hardened after each attempt. Builds speed converting thought to code, familiarity with production patterns before encountering them in real codebases, and muscle memory for Python idioms beyond algorithm solving.
+
 
 ## Notes
 I will be jotting down a few techniques, hacks and standardized method I learn each day.
